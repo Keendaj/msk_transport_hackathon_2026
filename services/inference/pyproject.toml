@@ -1,0 +1,18 @@
+[project]
+name = "inference"
+version = "0.1.0"
+description = "ML-инференс по пакетам телематики"
+requires-python = ">=3.14"
+dependencies = [
+    "aiokafka>=0.14.0",
+    "asyncpg>=0.31.0",
+    "fastapi>=0.141.1",
+    "numpy>=2.5.3",
+    "pydantic-settings>=2.15.0",
+    "torch>=2.14.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"

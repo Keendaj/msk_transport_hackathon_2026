@@ -1,0 +1,68 @@
+[project]
+name = "msk-transport-hackathon-2026"
+version = "0.1.0"
+description = "Приём NDTP и ML-инференс"
+readme = "README.md"
+authors = [
+    { name = "Keendaj", email = "dimashevtsov05@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "inference",
+    "transceiver",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "mypy>=2.3.1",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.16.9",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["services/*"]
+
+[tool.uv.sources]
+inference = { workspace = true }
+transceiver = { workspace = true }
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.pytest.ini_options]
+testpaths = ["services"]
+addopts = ["--import-mode=importlib"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.coverage.run]
+source = ["transceiver", "inference"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+src = ["services/transceiver/src", "services/inference/src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+
+[tool.pyright]
+# Синтаксис 3.14 (except без скобок), даже если в редакторе выбран более старый Python
+pythonVersion = "3.14"
+
+[[tool.mypy.overrides]]
+module = ["aiokafka", "aiokafka.*", "asyncpg", "asyncpg.*"]
+follow_untyped_imports = true

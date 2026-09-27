@@ -1,0 +1,142 @@
+{
+    "targetHost": "host.docker.internal",
+    "targetPort": 9000,
+    "units": [
+        {
+            "unitId": 1012706,
+            "intervalMs": 15000,
+            "autoGenerate": true,
+            "cells": [
+                { "type": "G6CellNav00" },
+                { "type": "G6CellIntSensor02" },
+                { "type": "G6CellUsi08" },
+                { "type": "G6CellUsi08" },
+                { "type": "G6CellCan10" },
+                { "type": "G6CellLls15" },
+                { "type": "G6CellTermo16" }
+            ]
+        },
+        {
+            "unitId": 893159,
+            "intervalMs": 15000,
+            "autoGenerate": true,
+            "cells": [
+                { "type": "G6CellNav00" },
+                { "type": "G6CellIntSensor02" },
+                { "type": "G6CellUsi08" },
+                { "type": "G6CellUsi08" },
+                { "type": "G6CellCan10" },
+                { "type": "G6CellLls15" },
+                { "type": "G6CellTermo16" }
+            ]
+        },
+        {
+            "unitId": 1099984,
+            "intervalMs": 15000,
+            "autoGenerate": false,
+            "cells": [
+                {
+                    "type": "G6CellNav00",
+                    "fields": {
+                        "longitude": 376173210,
+                        "latitude": 557551234,
+                        "extraDopBit0": false,
+                        "extraDopBit1": false,
+                        "extraDopBit2": false,
+                        "extraDopBit3": false,
+                        "extraDopBit4": false,
+                        "extraDopBit5": true,
+                        "extraDopBit6": true,
+                        "extraDopBit7": true,
+                        "batVoltage": 200,
+                        "speedAvg": 40,
+                        "speedMax": 60,
+                        "course": 90,
+                        "track": 0,
+                        "altitude": 150,
+                        "nsat": 12,
+                        "pdop": 1
+                    }
+                },
+                {
+                    "type": "G6CellIntSensor02",
+                    "fields": {
+                        "an_in0": 0,
+                        "an_in1": 0,
+                        "an_in2": 0,
+                        "an_in3": 0,
+                        "di_in": 0,
+                        "di_out": 0,
+                        "di0_counter": 0,
+                        "di1_counter": 0,
+                        "di2_counter": 0,
+                        "di3_counter": 0,
+                        "odometer": 150000,
+                        "csq": 20,
+                        "gprs_state": 1,
+                        "accel_energy": 0,
+                        "ext_volt": 12
+                    }
+                },
+                {
+                    "type": "G6CellUsi08",
+                    "fields": {
+                        "det_status": 1,
+                        "level_mm": 350,
+                        "level_l": 120,
+                        "temperature": 20
+                    }
+                },
+                {
+                    "type": "G6CellUsi08",
+                    "fields": {
+                        "det_status": 1,
+                        "level_mm": 300,
+                        "level_l": 100,
+                        "temperature": 19
+                    }
+                },
+                {
+                    "type": "G6CellCan10",
+                    "fields": {
+                        "secFlagStatus": 0,
+                        "allTimeEngine": 12500,
+                        "allTrack": 1500000,
+                        "allFuelConsum": 3000,
+                        "fuelLevel": 32843,
+                        "speedTurnEngine": 1500,
+                        "tEngine": 90,
+                        "speed": 40,
+                        "pressureAxis": [700, 700, 700, 700, 0],
+                        "flagAlarm": 0
+                    }
+                },
+                {
+                    "type": "G6CellLls15",
+                    "fields": {
+                        "status": 0,
+                        "main_float_level": 500,
+                        "temperature_average": 20,
+                        "percent_of_volume": 60,
+                        "total_Volume": 300,
+                        "weight": 250,
+                        "density": 830,
+                        "net_Standard_Volume": 295,
+                        "level_of_water": 0,
+                        "pressure": 0,
+                        "vapor_temperature_average": 20,
+                        "vapor_Weight": 0,
+                        "liquid_phase_Weight": 250
+                    }
+                },
+                {
+                    "type": "G6CellTermo16",
+                    "fields": {
+                        "status": 0,
+                        "temp": 20
+                    }
+                }
+            ]
+        }
+    ]
+}
